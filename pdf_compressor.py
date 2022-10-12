@@ -55,4 +55,4 @@ if __name__ == "__main__":
     compress_file(input_file, output_file)
 
 
-python pdf_compressor.py bert-paper.pdf bert-paper-min.pdf
+
