@@ -2,6 +2,8 @@ import os
 import sys
 from PDFNetPython3.PDFNetPython import PDFDoc, Optimizer, SDFDoc, PDFNet
 
+demo = 'demo:1665582560372:7ac59d5d0300000000932542100c846f6192d781a46e42d823f9887c58'
+
 def get_size_format(b, factor=1024, suffix="B"):
     """
     Scale bytes to its proper byte format
@@ -22,7 +24,7 @@ def compress_file(input_file: str, output_file: str):
     initial_size = os.path.getsize(input_file)
     try:
         # Initialize the library
-        PDFNet.Initialize('demo:1665582560372:7ac59d5d0300000000932542100c846f6192d781a46e42d823f9887c58')
+        PDFNet.Initialize(demo)
         doc = PDFDoc(input_file)
         # Optimize PDF with the default settings
         doc.InitSecurityHandler()
